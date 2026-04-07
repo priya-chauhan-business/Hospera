@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Hospera</title>
+  <meta name="description" content="Contact Hospera admissions for counselling, campus visits, and course information." />
+  <meta name="keywords" content="contact hospera, hospitality admissions contact Hyderabad, counselling request hospitality course, campus visit hospitality institute" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-contact">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>Admissions Open &bull; Hyderabad, Telangana</div>
+      <div class="topbar-links">
+        <a href="tel:+919999999999">+91 99999 99999</a>
+        <a href="mailto:admissions@hospera.in">admissions@hospera.in</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="Hospera Home">
+        <span class="brand-mark">H</span>
+        <span class="brand-copy">
+          <span class="brand-title">HOSPERA</span>
+          <span class="brand-subtitle">Institute of Hospitality</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="active">Contact</a>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-secondary">Brochure</a>
+          <a href="apply.html" class="btn btn-primary">Apply Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-images">
+        <div class="page-hero-thumb thumb-left parallax-layer" data-speed="0.08">
+          <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=80" alt="Hospitality reception desk" />
+        </div>
+        <div class="page-hero-thumb thumb-right parallax-layer" data-speed="0.12">
+          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=80" alt="Professional hospitality workspace" />
+        </div>
+      </div>
+      <div class="container page-hero-content reveal">
+        <p class="eyebrow">Contact Hospera</p>
+        <h1>Get quick help for admissions, counselling, and course questions.</h1>
+        <p>Use this contact form for general enquiries. For direct applications, use the dedicated Apply Now form.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow dark">Student Support Desk</p>
+          <h2>We respond quickly and guide you clearly.</h2>
+          <p>
+            Reach out for brochure requests, counselling calls, batch dates, campus visit details, and eligibility clarifications.
+          </p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <strong>Phone / WhatsApp</strong>
+              <span>+91 99999 99999</span>
+            </div>
+            <div class="contact-card">
+              <strong>Email</strong>
+              <span>admissions@hospera.in</span>
+            </div>
+            <div class="contact-card">
+              <strong>Location</strong>
+              <span>Hyderabad, Telangana, India</span>
+            </div>
+            <div class="contact-card">
+              <strong>Office Hours</strong>
+              <span>Monday to Saturday, 9:30 AM - 6:30 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form compact-form reveal" id="contactForm" novalidate>
+          <h3>Quick Enquiry Form</h3>
+
+          <label for="c_name">Full Name</label>
+          <input id="c_name" name="full_name" type="text" placeholder="Enter your full name" required />
+
+          <label for="c_phone">Phone Number</label>
+          <input id="c_phone" name="phone" type="tel" placeholder="Enter your phone number" required />
+
+          <label for="c_email">Email Address (Optional)</label>
+          <input id="c_email" name="email" type="email" placeholder="Enter your email address" />
+
+          <label for="c_enquiry">Enquiry Type</label>
+          <select id="c_enquiry" name="enquiry_type" required>
+            <option value="">Select enquiry type</option>
+            <option value="General Course Information">General Course Information</option>
+            <option value="Counselling Request">Counselling Request</option>
+            <option value="Brochure Request">Brochure Request</option>
+            <option value="Fee and Batch Details">Fee and Batch Details</option>
+            <option value="Campus Visit Request">Campus Visit Request</option>
+          </select>
+
+          <label for="c_time">Preferred Call Time</label>
+          <select id="c_time" name="preferred_time">
+            <option value="">Select preferred time</option>
+            <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+            <option value="12:00 PM - 3:00 PM">12:00 PM - 3:00 PM</option>
+            <option value="3:00 PM - 6:00 PM">3:00 PM - 6:00 PM</option>
+          </select>
+
+          <label for="c_message">Message</label>
+          <textarea id="c_message" name="message" rows="4" placeholder="Write your query briefly"></textarea>
+
+          <button type="submit" class="btn btn-primary btn-block">Send Enquiry</button>
+          <p id="formMessage" class="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://wa.me/919999999999" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>HOSPERA</h3>
+        <p>Hospitality training in Hyderabad with practical modules, professional grooming, and career preparation support.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="apply.html">Apply Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Hyderabad, Telangana</li>
+          <li>+91 99999 99999</li>
+          <li>admissions@hospera.in</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="copyrightText">&copy; 2026 Hospera. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
