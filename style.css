@@ -873,25 +873,19 @@ ul {
   color: rgba(255,255,255,0.86);
 }
 
-.site-footer {
+.footer {
   background: linear-gradient(180deg, #071224 0%, #09182d 100%);
   color: rgba(255,255,255,0.82);
   padding-top: 56px;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 28px;
-}
-
-.site-footer h3,
-.site-footer h4 {
+.footer h3,
+.footer h4 {
   color: #fff;
   margin-bottom: 14px;
 }
 
-.site-footer li {
+.footer li {
   margin-bottom: 10px;
 }
 
