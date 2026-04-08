@@ -17,6 +17,82 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero .hero-shell {
+      max-width: 1160px;
+    }
+
+    .hero .stats-row {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: stretch;
+    }
+
+    .hero .stat-card {
+      min-height: 206px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .hero .stat-number {
+      font-size: clamp(2rem, 2.8vw, 3rem);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .hero .stat-label {
+      margin-top: auto;
+      font-size: 0.76rem;
+      letter-spacing: 0.18em;
+    }
+
+    .hero .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero .chip {
+      width: auto;
+      min-width: max-content;
+      min-height: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      text-align: center;
+      line-height: 1;
+      white-space: nowrap;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+    }
+
+    @media (max-width: 1100px) {
+      .hero .hero-shell {
+        max-width: 920px;
+      }
+
+      .hero .stats-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .hero .stats-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero .chip-row {
+        gap: 10px;
+      }
+
+      .hero .chip {
+        white-space: normal;
+      }
+    }
+  </style>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -64,7 +140,7 @@
   </header>
 
   <main class="main-shell">
-    <section class="hero" id="cover" style="--hero-image: url('assets/lobby.jpg');">
+    <section class="hero" id="cover" style="background-image: url('assets/lobby.jpg');">
       <div class="container hero-grid">
         <div class="hero-shell" data-reveal>
           <span class="section-kicker">Institute of Hospitality</span>
@@ -98,7 +174,7 @@
           </div>
           <div class="chip-row">
             <span class="chip">6 Months Program</span>
-            <span class="chip">₹75K+ Avg Starting Salary</span>
+            <span class="chip">&#8377;75K+ Avg Starting Salary</span>
             <span class="chip">UK Standards</span>
             <span class="chip">From Training to Job Ready</span>
           </div>
@@ -150,54 +226,6 @@
 
     <section class="section section-dark">
       <div class="container">
-        <div class="section-header" data-reveal>
-          <span class="section-kicker">Explore the Experience</span>
-          <h2 class="section-title">A one-page luxury concept, rebuilt as <span class="highlight">GitHub-ready pages</span></h2>
-          <p class="section-intro">
-            The original YouWare site presents Hospera as a premium editorial landing page. This version keeps that same mood and structure,
-            while breaking the experience into clearer pages for GitHub hosting.
-          </p>
-        </div>
-
-        <div class="link-grid two">
-          <a class="link-card" href="about.html" style="--card-image: url('assets/reception.jpg');" data-reveal>
-            <div>
-              <span class="card-tag">About</span>
-              <h3 class="card-title">UK company background, quality promise, and hospitality identity</h3>
-              <p class="card-copy">Move from the homepage into the institutional story, British standards, and the service mindset behind the program.</p>
-            </div>
-            <span class="link-arrow">Open About Page</span>
-          </a>
-          <a class="link-card" href="programs.html" style="--card-image: url('assets/bedroom.jpg');" data-reveal>
-            <div>
-              <span class="card-tag">Programs</span>
-              <h3 class="card-title">Opera PMS, interactive learning, Arabic training, and the six-month timeline</h3>
-              <p class="card-copy">The full academic structure sits on a dedicated programs page, just like a proper institute website should.</p>
-            </div>
-            <span class="link-arrow">Open Programs Page</span>
-          </a>
-          <a class="link-card" href="careers.html" style="--card-image: url('assets/hospitality-scene.jpg');" data-reveal>
-            <div>
-              <span class="card-tag">Careers</span>
-              <h3 class="card-title">Placement assistance, partner hotels, Gulf readiness, and career support</h3>
-              <p class="card-copy">Students and parents can directly explore what comes after the classroom and how careers are supported.</p>
-            </div>
-            <span class="link-arrow">Open Careers Page</span>
-          </a>
-          <a class="link-card" href="admissions.html" style="--card-image: url('assets/hotel-room.jpg');" data-reveal>
-            <div>
-              <span class="card-tag">Admissions</span>
-              <h3 class="card-title">Program details, enrollment steps, eligibility guidance, and next intake information</h3>
-              <p class="card-copy">The admissions page now acts as the decision-making page for application intent and course clarity.</p>
-            </div>
-            <span class="link-arrow">Open Admissions Page</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-contrast">
-      <div class="container">
         <div class="split-grid reverse">
           <div class="media-frame" data-reveal>
             <img src="assets/bedroom.jpg" alt="Luxury hospitality room standards training" />
@@ -212,7 +240,7 @@
             </ul>
             <div class="hero-actions">
               <a class="btn btn-gold" href="programs.html#opera">See Program Structure</a>
-              <a class="btn btn-outline-dark" href="programs.html#timeline">Review the Timeline</a>
+              <a class="btn btn-outline" href="programs.html#timeline">Review the Timeline</a>
             </div>
           </div>
         </div>
@@ -311,7 +339,7 @@
 
     <section class="section section-light section-anchor" id="enroll">
       <div class="container">
-        <div class="banner-card" style="--card-image: url('assets/hotel-room.jpg');" data-reveal>
+        <div class="banner-card" style="background-image: linear-gradient(180deg, rgba(8, 17, 31, 0.82), rgba(8, 17, 31, 0.94)), url('assets/hotel-room.jpg');" data-reveal>
           <span class="card-tag">Ready to Begin?</span>
           <h3>Enroll for the next Hospera intake</h3>
           <p>
@@ -332,7 +360,7 @@
       <div>
         <h3 class="footer-title">Hospera Institute</h3>
         <p class="footer-copy">UK-founded Institute of Hospitality in Hyderabad, India.</p>
-        <p class="footer-small">© <span id="currentYear"></span> Hospera Institute of Hospitality. All rights reserved.</p>
+        <p class="footer-small">Â© <span id="currentYear"></span> Hospera Institute of Hospitality. All rights reserved.</p>
       </div>
       <div class="footer-links">
         <a href="about.html">About</a>
@@ -347,7 +375,8 @@
       </div>
     </div>
   </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
+
