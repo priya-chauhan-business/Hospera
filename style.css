@@ -447,6 +447,11 @@ select {
 }
 
 .stat-card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 22px 24px;
   border: 1px solid rgba(196, 150, 58, 0.22);
   background: rgba(255, 255, 255, 0.04);
@@ -461,15 +466,18 @@ select {
   font-family: "Playfair Display", serif;
   font-size: clamp(1.55rem, 3vw, 2.4rem);
   line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .stat-label {
   display: block;
   margin-top: 8px;
   color: rgba(255, 255, 255, 0.58);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
