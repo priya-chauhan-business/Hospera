@@ -785,6 +785,54 @@
         font-size: clamp(2.2rem, 8vw, 3.4rem);
       }
     }
+    body { font-family: 'DM Sans', sans-serif; }
+    .site-header { transition: background 0.35s ease, box-shadow 0.35s ease; }
+    .site-header.scrolled {
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+    }
+    .site-header.scrolled .brand-title   { color: #0b1628; }
+    .site-header.scrolled .brand-subtitle { color: #6b6b6b; }
+    .site-header.scrolled .nav-links a   { color: #6b6b6b; }
+    .site-header.scrolled .nav-links a:hover { color: #0b1628; }
+    .site-header.scrolled .nav-toggle span  { background: #0b1628; }
+
+    .nav-links a {
+      position: relative; padding-bottom: 3px;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 1.5px; background: #c4963a;
+      transform: scaleX(0); transform-origin: left; transition: transform 0.25s;
+    }
+    .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+
+    .section-kicker::before {
+      content: ''; width: 28px; height: 1.5px;
+      background: #c4963a; display: inline-block;
+      vertical-align: middle; margin-right: 12px;
+    }
+    .section-divider { width: 44px; height: 2px; background: #c4963a; margin: 20px 0; }
+
+    .media-badge {
+      position: absolute; bottom: 28px; left: -20px;
+      background: #c4963a; color: #fff;
+      padding: 16px 22px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.08rem; font-weight: 700;
+    }
+    .media-badge span {
+      display: block; font-family: 'DM Sans', sans-serif;
+      font-size: 0.6rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      opacity: 0.8; margin-top: 3px;
+    }
+    .section-title { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.02em; }
+    .hero-title    { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.025em; }
+
+    [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    [data-reveal].visible { opacity: 1; transform: translateY(0); }
   </style>
   <script type="application/ld+json">
     {
