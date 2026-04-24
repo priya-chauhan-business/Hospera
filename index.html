@@ -1114,12 +1114,24 @@
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var chips = document.querySelectorAll(".chip-row .chip");
-      if (chips.length > 1) {
-        chips[1].textContent = "\u20B975K+ Avg Starting Salary";
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+      document.addEventListener('DOMContentLoaded', function () {
+        var chips = document.querySelectorAll('.chip-row .chip');
+        if (chips.length > 1) chips[1].textContent = '\u20B975K+ Avg Starting Salary';
+        });
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add('visible'), i * 90);
+              observer.unobserve(e.target);
       }
     });
+   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
   </script>
   <script src="script.js"></script>
 </body>
